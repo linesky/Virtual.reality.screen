@@ -21,7 +21,7 @@ def find_blue_cursor_position(frame):
             blue_channel,green_channel,red_channel=frame[yy,xx]
             if blue_channel>128 and green_channel>128 and red_channel>128:
                 
-                blue_channel2,green_channel2,red_channel2=im.getpixel((xx,yy))
+                red_channel2,green_channel2,blue_channel2=im.getpixel((xx,yy))
                 frame[yy,xx]=[blue_channel2,green_channel2,red_channel2]
                 
             else:
